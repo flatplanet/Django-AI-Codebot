@@ -19,7 +19,7 @@ def home(request):
 			return render(request, 'home.html', {'lang_list':lang_list, 'code':code, 'lang':lang})			
 		else:
 			# OpenAI Key
-			openai.api_key = "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"
+			openai.api_key = "YOUR API KEY HERE"
 			# Create OpenAI Instance
 			openai.Model.list()
 			# Make an OpenAI Request
@@ -64,7 +64,7 @@ def suggest(request):
 			return render(request, 'suggest.html', {'lang_list':lang_list, 'code':code, 'lang':lang})			
 		else:
 			# OpenAI Key
-			openai.api_key = "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"
+			openai.api_key = "YOUR API KEY HERE"
 			# Create OpenAI Instance
 			openai.Model.list()
 			# Make an OpenAI Request
