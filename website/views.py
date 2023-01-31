@@ -42,7 +42,7 @@ def home(request):
 				return render(request, 'home.html', {'lang_list':lang_list, 'response':response, 'lang':lang})
 							
 			except Exception as e:
-				return render(request, 'home.html', {'lang_list':lang_list, 'code':e, 'lang':lang})
+				return render(request, 'home.html', {'lang_list':lang_list, 'response':e, 'lang':lang})
 
 
 	return render(request, 'home.html', {'lang_list':lang_list})
