@@ -61,7 +61,7 @@ def suggest(request):
 		# Check to make sure they picked a lang
 		if lang == "Select Programming Language":
 			messages.success(request, "Hey! You Forgot To Pick A Programming Language...")
-			return render(request, 'suggest.html', {'lang_list':lang_list, 'code':code, 'lang':lang})			
+			return render(request, 'suggest.html', {'lang_list':lang_list, 'code':code, 'lang':lang, 'response':code})			
 		else:
 			# OpenAI Key
 			openai.api_key = "YOUR API KEY HERE"
@@ -88,7 +88,7 @@ def suggest(request):
 				return render(request, 'suggest.html', {'lang_list':lang_list, 'response':response, 'lang':lang})
 							
 			except Exception as e:
-				return render(request, 'suggest.html', {'lang_list':lang_list, 'code':e, 'lang':lang})
+				return render(request, 'suggest.html', {'lang_list':lang_list, 'response':e, 'lang':lang})
 
 
 	return render(request, 'suggest.html', {'lang_list':lang_list})
