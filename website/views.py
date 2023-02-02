@@ -16,7 +16,7 @@ def home(request):
 		# Check to make sure they picked a lang
 		if lang == "Select Programming Language":
 			messages.success(request, "Hey! You Forgot To Pick A Programming Language...")
-			return render(request, 'home.html', {'lang_list':lang_list, 'code':code, 'lang':lang})			
+			return render(request, 'home.html', {'lang_list':lang_list, 'response':code, 'code':code, 'lang':lang})			
 		else:
 			# OpenAI Key
 			openai.api_key = "YOUR API KEY HERE"
