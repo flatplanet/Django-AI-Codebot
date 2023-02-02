@@ -71,7 +71,7 @@ def suggest(request):
 			try:
 				response = openai.Completion.create(
 					engine = 'text-davinci-003',
-					prompt = f"Respond only with code. {code}",
+					prompt = f"Respond only with code. Using {lang}. {code}",
 					temperature = 0,
 					max_tokens = 1000,
 					top_p=1.0,
